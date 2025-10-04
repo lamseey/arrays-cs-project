@@ -3,8 +3,8 @@ package samplearrays;
 public class DogShelter {
 
     // initialize an array of 3
-    static int n = 3;
-    static int[] dogCounts = new int[n];
+    static int n = 3; // number of dog breeds
+    static int[] dogCounts = new int[n]; // array to hold counts of each breed
 
 
     public static void main(String[] args) {
@@ -31,14 +31,16 @@ public class DogShelter {
 
     // Add count to a given index
     public static void addBreed(int index, int count) {
+        // if index is out of range, print error message
         if (index >= n || index < 0) System.out.println("Index out of range");
-        dogCounts[index] += count;
+        dogCounts[index] += count; // add count to the specified breed
     }
 
     // Remove a breed by setting its count to 0
     public static void deleteBreed(int index) {
+        // if index is out of range, print error message
         if (index >= n || index < 0) System.out.println("Index out of range");
-        dogCounts[index] = 0;
+        dogCounts[index] = 0; // set count to 0 for the specified breed
     }
 
     // Display all dog counts
